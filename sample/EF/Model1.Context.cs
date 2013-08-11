@@ -13,10 +13,10 @@ namespace sample.EF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class Database1Entities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public Database1Entities()
+            : base("name=Database1Entities")
         {
         }
     
@@ -25,14 +25,6 @@ namespace sample.EF
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Application> Applications { get; set; }
-        public DbSet<Country> Countries { get; set; }
-        public DbSet<Definition> Definitions { get; set; }
         public DbSet<English> Englishes { get; set; }
-        public DbSet<Membership> Memberships { get; set; }
-        public DbSet<Profile> Profiles { get; set; }
-        public DbSet<Role> Roles { get; set; }
-        public DbSet<UpDownVote> UpDownVotes { get; set; }
-        public DbSet<User> Users { get; set; }
     }
 }

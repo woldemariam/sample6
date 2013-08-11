@@ -13,12 +13,12 @@ namespace sample.Controllers
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
-            //using (Entities e = new Entities())
-            //{
-            //    var item = e.Englishes.First();
-            //    ViewBag.Message = item.Term;
+            using (Database1Entities e = new Database1Entities())
+            {
+                var item = e.Englishes.First();
+                ViewBag.Message = item.Term;
 
-            //}
+            }
 
             return View();
         }

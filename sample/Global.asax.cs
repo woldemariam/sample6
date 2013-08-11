@@ -21,16 +21,16 @@ namespace sample
 
         public static void RegisterRoutes(RouteCollection routes)
         {
-           // routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.RouteExistingFiles = true;
+            //routes.RouteExistingFiles = true;
             //routes.IgnoreRoute("{file}.html");
 
-             //routes.MapRoute(
-             //    "Default", // Route name
-             //    "{controller}/{action}/{id}", // URL with parameters
-             //    new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Paramet er defaults
-             //);
+            routes.MapRoute(
+                "Default", // Route name
+                "{controller}/{action}/{id}", // URL with parameters
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Paramet er defaults
+            );
 
         }
 

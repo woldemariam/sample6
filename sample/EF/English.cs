@@ -14,14 +14,7 @@ namespace sample.EF
     
     public partial class English
     {
-        public English()
-        {
-            this.Definitions = new HashSet<Definition>();
-        }
-    
         public int Id { get; set; }
         public string Term { get; set; }
-    
-        public virtual ICollection<Definition> Definitions { get; set; }
     }
 }
